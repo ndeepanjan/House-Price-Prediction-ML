@@ -10,7 +10,7 @@ The project demonstrates the complete machine learning workflow, including data 
 
 ## 🎯 Problem Statement
 
-Develop a Linear Regression model to predict the prices of houses based on their square footage and the number of bedrooms and bathrooms.
+Implement a Linear Regression model to predict the prices of houses based on their square footage and the number of bedrooms and bathrooms.
 
 ---
 
