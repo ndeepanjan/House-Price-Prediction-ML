@@ -1,67 +1,40 @@
-# 🏠 House Price Prediction using Machine Learning
+# 🏠 House Price Prediction using Linear Regression
 
-## 📌 Overview
+## 📌 Project Overview
 
-This project presents an end-to-end Machine Learning solution for predicting residential property prices using the Ames Housing Dataset. The objective is to estimate house prices based on key structural and quality-related attributes through data analysis, feature engineering, and Linear Regression modeling.
+This project implements a Linear Regression model to predict house prices based on key housing characteristics such as square footage, number of bedrooms, and number of bathrooms.
 
-The project demonstrates a complete machine learning workflow, including data preprocessing, exploratory data analysis (EDA), feature selection, model training, evaluation, and prediction.
+The project demonstrates the complete machine learning workflow, including data exploration, preprocessing, feature selection, model training, evaluation, and prediction.
 
 ---
 
 ## 🎯 Problem Statement
 
-Accurately estimating property values is a critical task in the real estate industry. The goal of this project is to develop a predictive model capable of estimating house prices using important housing characteristics such as living area, overall quality, garage specifications, basement area, bathrooms, and construction year.
+Develop a Linear Regression model to predict the prices of houses based on their square footage and the number of bedrooms and bathrooms.
 
 ---
 
 ## 📊 Dataset Information
 
-**Dataset:** Ames Housing Dataset
+Dataset: Ames Housing Dataset
 
-* Total Records: 1,460
+* Total Records: 1460
 * Total Features: 81
-* Target Variable: `SalePrice`
-
-The dataset contains detailed information about residential properties, including physical attributes, construction quality, location characteristics, and sale information.
+* Target Variable: SalePrice
 
 ---
 
-## 🔍 Exploratory Data Analysis
+## 🔍 Features Used
 
-The dataset was analyzed to understand:
-
-* Data structure and feature types
-* Missing value patterns
-* Distribution of house prices
-* Feature correlations
-* Important predictors of property value
-
-### Key Observations
-
-* House prices exhibit a positively skewed distribution.
-* Overall quality is the strongest predictor of house prices.
-* Living area, garage capacity, basement area, and year built significantly influence property value.
-* Several features contain missing values representing the absence of specific facilities (e.g., pool, fence, alley access).
-
----
-
-## ⚙️ Feature Selection
-
-The following features were selected based on correlation analysis and domain relevance:
-
-| Feature     | Description                         |
-| ----------- | ----------------------------------- |
-| OverallQual | Overall material and finish quality |
-| GrLivArea   | Above-ground living area (sq ft)    |
-| GarageCars  | Garage capacity in number of cars   |
-| GarageArea  | Garage area (sq ft)                 |
-| TotalBsmtSF | Total basement area (sq ft)         |
-| FullBath    | Number of full bathrooms            |
-| YearBuilt   | Year the house was built            |
+| Feature      | Description                               |
+| ------------ | ----------------------------------------- |
+| GrLivArea    | Above-ground living area (Square Footage) |
+| BedroomAbvGr | Number of Bedrooms                        |
+| FullBath     | Number of Full Bathrooms                  |
 
 ### Target Variable
 
-* SalePrice
+* SalePriceexp
 
 ---
 
@@ -78,72 +51,85 @@ The following features were selected based on correlation analysis and domain re
 
 ---
 
+## ⚙️ Project Workflow
+
+1. Data Loading and Inspection
+2. Exploratory Data Analysis (EDA)
+3. Missing Value Analysis
+4. Feature Selection
+5. Train-Test Split
+6. Linear Regression Model Training
+7. Model Evaluation
+8. House Price Prediction
+
+---
+
 ## 🤖 Machine Learning Model
 
-### Algorithm Used
+Algorithm Used:
 
 **Linear Regression**
 
-Linear Regression was selected to model the relationship between housing attributes and property prices, providing an interpretable baseline model for house price prediction.
+The model learns the relationship between housing characteristics and selling prices to estimate the value of unseen houses.
 
 ---
 
 ## 📈 Model Performance
 
-| Metric                         | Value  |
-| ------------------------------ | ------ |
-| Mean Absolute Error (MAE)      | 25,121 |
-| Root Mean Squared Error (RMSE) | 39,652 |
-| R² Score                       | 0.795  |
-
-### Interpretation
-
-The model achieved an **R² Score of 0.795**, indicating that approximately **79.5% of the variance in house prices** can be explained by the selected features.
+| Metric   | Value                     |
+| -------- | ------------------------- |
+| MAE      | (Update after retraining) |
+| RMSE     | (Update after retraining) |
+| R² Score | (Update after retraining) |
 
 ---
+
+## 🧠 How the Model Works
+
+The Linear Regression model learns the relationship between housing features and selling prices from historical housing data.
+
+During training, the model analyzes:
+
+* Living Area (Square Footage)
+* Number of Bedrooms
+* Number of Bathrooms
+* Actual House Prices
+
+Based on these observations, the model learns how each feature influences the final selling price.
+
+For example:
+
+* Larger houses generally have higher prices.
+* Houses with more bedrooms tend to be more expensive.
+* Additional bathrooms can increase property value.
+
+After training, the model can estimate the price of a new house by applying the learned relationships to user-provided inputs.
+
+### Example
+
+Input:
+
+* Living Area: 1500 sq ft
+* Bedrooms: 3
+* Bathrooms: 2
+
+Output:
+
+* Predicted House Price: Estimated by the Linear Regression model
+
+In simple terms, the model studies patterns from previously sold houses and uses those patterns to predict the price of a new house.
 
 ## 🔮 Sample Prediction
 
 ### Input
 
-* Overall Quality: 5
 * Living Area: 1500 sq ft
-* Garage Capacity: 2 Cars
-* Garage Area: 300 sq ft
-* Basement Area: 500 sq ft
+* Bedrooms: 3
 * Bathrooms: 2
-* Year Built: 2006
 
-### Predicted Output
+### Output
 
-**Predicted House Price: $153,781.09**
-
----
-
-## 📂 Project Workflow
-
-1. Data Collection and Loading
-2. Data Understanding
-3. Missing Value Analysis
-4. Exploratory Data Analysis (EDA)
-5. Correlation Analysis
-6. Feature Selection
-7. Data Validation
-8. Train-Test Split
-9. Model Training
-10. Model Evaluation
-11. House Price Prediction
-
----
-
-## 🚀 Future Enhancements
-
-* Streamlit Web Application
-* Advanced Regression Algorithms
-* Hyperparameter Optimization
-* Model Serialization and Deployment
-* Interactive User Interface
-* Cloud Deployment
+Predicted House Price: Model Generated Value
 
 ---
 
@@ -151,17 +137,14 @@ The model achieved an **R² Score of 0.795**, indicating that approximately **79
 
 * Data Analysis
 * Data Visualization
-* Feature Engineering
-* Machine Learning
-* Regression Modeling
+* Feature Selection
+* Linear Regression
 * Model Evaluation
+* Machine Learning Fundamentals
 * Python Programming
-* GitHub Project Management
 
 ---
 
 ## 👨‍💻 Author
 
 **NALANAGULA DEEPANJAN**
-
-Machine Learning Enthusiast | AI & Data Science Learner
